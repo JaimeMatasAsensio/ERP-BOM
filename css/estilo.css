@@ -47,7 +47,9 @@ nav{
 .nav-pills>li:action{
   color: black;
 }
-
+#drop{
+  display: none;
+}
 .drop-cont{
   position:absolute;
   z-index: 1;
