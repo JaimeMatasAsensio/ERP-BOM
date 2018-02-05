@@ -101,18 +101,19 @@ function removeDrop()
 
 function unfoldingDiv(divDrop){
 
-  var height = divDrop.offsetHeight;
   var id = setInterval(grow,10);
 
   function grow(){
-    if(height == 135){
+
+    var height = divDrop.offsetHeight;
+    if(height > 134){
       var contenido = divDrop.children;
       for(var i = 0; i < contenido.length ; i++){
         contenido[i].style.display = "block";
       }
       clearInterval(id);
     }else{
-      height = divDrop.offsetHeight;
+
       height += 5; 
       divDrop.style.height = height + "px";
     }
