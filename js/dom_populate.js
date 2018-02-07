@@ -6,8 +6,8 @@ var Store = StoreHouse.getInstance();
 var IdMainCont = document.getElementById("main-cont");
 var divShopsMenu = document.getElementById("ShopsMenu");
 divShopsMenu.appendChild(menuShopPopulate());
-
-
+var divCloseWindow = document.getElementById("closeWindow");
+divCloseWindow.appendChild(btnCloseWindows());
 
 function initPopulate()
 /*Funcion que inicializa la pagina cargando las tiendas que existen dentro del storehouse */
@@ -164,6 +164,7 @@ function shopPopulate(shop)
       BtnVerProducto.className = "btn btn-success";
       BtnVerProducto.appendChild(document.createTextNode("Ver Producto"));
       divInfo.appendChild(BtnVerProducto);
+      BtnVerProducto.addEventListener("click",ProductInWindowFromShop(shop,item.value.producto.IdProduct));
 
       item = stockShop.next();
     }
@@ -343,7 +344,6 @@ function productShopPopulate(shop,IdPro)
 function menuCategoryShopPopulate(shop)
 /*Funcion que muestra un menu de categorias de cada tienda */
 {
-
   var menuCategory = document.createElement("ul");
   menuCategory.className = "list-group text-center";
   var catIte = shop.categoryIte;
@@ -463,7 +463,7 @@ function productCategoryShopPopulate(shop,IdCategory)
       BtnVerProducto.className = "btn btn-success";
       BtnVerProducto.appendChild(document.createTextNode("Ver Producto"));
       divInfo.appendChild(BtnVerProducto);
-
+      BtnVerProducto.addEventListener("click",ProductInWindowFromShop(shop,item.value.producto.IdProduct));
 
       item = stockShop.next();
     }
@@ -488,6 +488,7 @@ function productCategoryShopPopulate(shop,IdCategory)
 }
 
 function menuShopPopulate(){
+
   var ulShops = document.createElement("ul");
   ulShops.className = "list-group text-center";
   ulShops.style.margin = "10px auto";

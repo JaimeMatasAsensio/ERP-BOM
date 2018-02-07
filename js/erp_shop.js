@@ -332,7 +332,7 @@ function Shop(cif,nombre,direccion,telefono,coords)
       if( indexPro != -1){
         return _stock[indexPro];
       }else{
-        throw new ProductNotExistInShop(proId,cant);
+        throw new ProductNotExistInShop(proId,_nombre);
       }
 
     }
