@@ -28,7 +28,6 @@ function menuDropDown(liId)
       var divDrop = document.createElement("div");
       divDrop.className = "drop-cont";
       divDrop.setAttribute("id","drop");
-
       liId.appendChild(divDrop);
 
       unfoldingDiv(divDrop);

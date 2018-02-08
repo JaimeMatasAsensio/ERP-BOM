@@ -47,7 +47,9 @@ nav{
 .nav-pills>li:action{
   color: black;
 }
-
+#drop{
+  display: none;
+}
 .drop-cont{
   position:absolute;
   z-index: 1;
@@ -72,15 +74,27 @@ nav{
 
 /*estilos para el contenedor principal y sus elementos*/
 #main-cont{
-  background-color: rgb(192, 220, 240);
   min-height: calc(100vh - 305px);
   padding: 10px 0;
+}
+
+#main-cont,#closeWindow,#ShopsMenu{
+  background-color: rgb(192, 220, 240);
 }
 
 #ShopsMenu,#tiendas,#items{
   border-bottom: 2px solid rgba(3, 33, 55, 1);
   border-top: 2px solid rgba(3, 33, 55, 1);
 }
+
+#closeWindow{
+  border-bottom: 2px solid rgba(3, 33, 55, 1);
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+
 #items{
   border-top:none;
 }
