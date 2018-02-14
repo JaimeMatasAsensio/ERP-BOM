@@ -101,7 +101,7 @@ function removeDrop()
 function unfoldingDiv(divDrop){
 
   var id = setInterval(grow,10);
-
+  divDrop.style.display = "block";
   function grow(){
 
     var height = divDrop.offsetHeight;
